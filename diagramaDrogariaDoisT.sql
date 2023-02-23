@@ -45,7 +45,7 @@ CREATE TABLE `produto` (
 CREATE TABLE `pedido` (
   `id_pedido` int PRIMARY KEY AUTO_INCREMENT,
   `fk_id_cliente` int,
-  `fk_id_produto` int,
+  `fk_id_carrinho` int,
   `nr_pedido` int,
   `dt_pedido` date,
   `vl_pedido` numeric
@@ -53,15 +53,29 @@ CREATE TABLE `pedido` (
 
 CREATE TABLE `forma_pagamento` (
   `id_forma_pgto` int PRIMARY KEY AUTO_INCREMENT,
+  `fk_id_pedido` varchar(255),
   `nm_forma_pgto` varchar(60),
   `ds_forma_pgto` varchar(255),
   `st_forma_pgto` char(9)
+);
+
+CREATE TABLE `carrinho` (
+  `id_carrinho` int PRIMARY KEY AUTO_INCREMENT,
+  `fk_id_produto` int,
+  `qt_item` int,
+  `total_car` int,
+  `id_produto` char,
+  `id_cliente` char
 );
 
 ALTER TABLE `telefone_cliente` ADD FOREIGN KEY (`fk_id_cliente`) REFERENCES `cliente` (`id_cliente`);
 
 ALTER TABLE `endereco_cliente` ADD FOREIGN KEY (`fk_id_cliente`) REFERENCES `cliente` (`id_cliente`);
 
+ALTER TABLE `forma_pagamento` ADD FOREIGN KEY (`fk_id_pedido`) REFERENCES `pedido` (`id_pedido`);
+
 ALTER TABLE `pedido` ADD FOREIGN KEY (`fk_id_cliente`) REFERENCES `cliente` (`id_cliente`);
 
-ALTER TABLE `pedido` ADD FOREIGN KEY (`fk_id_produto`) REFERENCES `produto` (`id_produto`);
+ALTER TABLE `carrinho` ADD FOREIGN KEY (`id_carrinho`) REFERENCES `pedido` (`fk_id_carrinho`);
+
+ALTER TABLE `produto` ADD FOREIGN KEY (`id_produto`) REFERENCES `carrinho` (`fk_id_produto`);
