@@ -1,21 +1,17 @@
 CREATE TABLE `cliente` (
   `id_cliente` int PRIMARY KEY AUTO_INCREMENT,
-  `cpf` varchar(11),
+  `cpf` varchar(11) UNIQUE NOT NULL,
   `nome_social` varchar(250),
   `rg` varchar(9),
-  `dt_nascimento` date,
+  `dt_nascimento` date NOT NULL,
+  `email` varchar(100) UNIQUE NOT NULL,
+  `senha` varchar(30) NOT NULL,
   `genero` char
-);
-
-CREATE TABLE `login` (
-  `id_login` int PRIMARY KEY AUTO_INCREMENT,
-  `username` char,
-  `cpf` varchar(11),
-  `senha` char
 );
 
 CREATE TABLE `telefone_cliente` (
   `id_telefone` int PRIMARY KEY AUTO_INCREMENT,
+  `fk_id_cliente` int,
   `nr_ddi` numeric(3),
   `nr_ddd` numeric(3),
   `nr_telefone` numeric(10),
@@ -23,15 +19,9 @@ CREATE TABLE `telefone_cliente` (
   `st_telefone` varchar(15)
 );
 
-CREATE TABLE `email_cliente` (
-  `id_email` int PRIMARY KEY AUTO_INCREMENT,
-  `ds_email` varchar(100),
-  `tipo_email` varchar(20),
-  `st_email` varchar(15)
-);
-
 CREATE TABLE `endereco_cliente` (
   `id_end` int PRIMARY KEY AUTO_INCREMENT,
+  `fk_id_cliente` int,
   `cep` char,
   `logradouro` varchar(255),
   `bairro` varchar(255),
@@ -43,29 +33,35 @@ CREATE TABLE `endereco_cliente` (
   `p_referencia` varchar(60)
 );
 
-CREATE TABLE `plano_saude` (
-  `id_plano` int PRIMARY KEY AUTO_INCREMENT,
-  `nome_plano` varchar(60),
-  `cnpj` int(14),
-  `numero_plano` int,
-  `telefone` int,
-  `dt_inicio` date,
-  `dt_fim` date
-);
-
 CREATE TABLE `produto` (
-  `id_produto` int PRIMARY KEY AUTO_INCREMENT
+  `id_produto` int PRIMARY KEY AUTO_INCREMENT,
+  `cd_produto` int,
+  `nm_produto` varchar(100),
+  `ds_produto` varchar(100),
+  `qt_estoque` int,
+  `vl_unitario` numeric
 );
 
 CREATE TABLE `pedido` (
   `id_pedido` int PRIMARY KEY AUTO_INCREMENT,
-  `num_pedido` int
+  `fk_id_cliente` int,
+  `fk_id_produto` int,
+  `nr_pedido` int,
+  `dt_pedido` date,
+  `vl_pedido` numeric
 );
 
 CREATE TABLE `forma_pagamento` (
-  `id_fpagamento` int PRIMARY KEY AUTO_INCREMENT
+  `id_forma_pgto` int PRIMARY KEY AUTO_INCREMENT,
+  `nm_forma_pgto` varchar(60),
+  `ds_forma_pgto` varchar(255),
+  `st_forma_pgto` char(9)
 );
 
-CREATE TABLE `carrinho` (
-  `id_carrinho` int PRIMARY KEY AUTO_INCREMENT
-);
+ALTER TABLE `telefone_cliente` ADD FOREIGN KEY (`fk_id_cliente`) REFERENCES `cliente` (`id_cliente`);
+
+ALTER TABLE `endereco_cliente` ADD FOREIGN KEY (`fk_id_cliente`) REFERENCES `cliente` (`id_cliente`);
+
+ALTER TABLE `pedido` ADD FOREIGN KEY (`fk_id_cliente`) REFERENCES `cliente` (`id_cliente`);
+
+ALTER TABLE `pedido` ADD FOREIGN KEY (`fk_id_produto`) REFERENCES `produto` (`id_produto`);
