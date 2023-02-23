@@ -53,7 +53,7 @@ CREATE TABLE `pedido` (
 
 CREATE TABLE `forma_pagamento` (
   `id_forma_pgto` int PRIMARY KEY AUTO_INCREMENT,
-  `fk_id_pedido` varchar(255),
+  `fk_id_pedido` int,
   `nm_forma_pgto` varchar(60),
   `ds_forma_pgto` varchar(255),
   `st_forma_pgto` char(9)
