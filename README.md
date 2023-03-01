@@ -1,9 +1,9 @@
 
 # Projeto em Grupo — Banco de Dados relacionais
 
- Já pensou em construir um banco de dados. O banco de dados é a organização e armazenagem de informações sobre um domínio específico. De forma mais simples, é o agrupamento de dados que tratam do mesmo assunto, e que precisam ser armazenados para segurança ou conferência futura. 
+ Já considerou construir um banco de dados. O banco de dados é a organização e armazenagem de informações sobre um domínio específico. De forma mais simples, é o agrupamento de dados que tratam do mesmo assunto, e que precisam ser armazenados para segurança ou conferência futura. 
 
- A linguagem de consulta estruturada(SQL) surgiu em meados da decada de 70 sendo seu principal foco ser uma linguagem que se adapta ao modelo relacional. Seu sucesso foi tão grande que a ANSI (American National Standarts Institute), padronizou as implementações da linguagem, hoje a maioria de BD’s seguem criteriosamente esta padronização, podendo ter algumas variações.
+ A linguagem de consulta estruturada(SQL) surgiu em meados da década de 70, sendo seu principal foco ser uma linguagem que se adapta ao modelo relacional. Seu sucesso foi tão grande que a ANSI (American National Standarts Institute), padronizou as implementações da linguagem, hoje a maioria de BD’s seguem criteriosamente esta padronização, podendo ter algumas variações.
 
 
 ## Modulo 3 - Construindo um e-commerce
@@ -42,11 +42,11 @@ Veja um exemplo logo a baixo:
 
 ## Autores
 
-Mencione todos aqueles que ajudaram a levantar o projeto desde o seu início.
+Mencione todos os que ajudaram a levantar o projeto desde o seu início.
 
 * **Colaborador** - [Gabriel Piovesani] - [https://github.com/GabrielPiovesani]
 * **Gestão de conhecimento** — [Thiago Soares] — [https://github.com/ThiagoMSo]
-* **Gestora de Pessoa e Engajamento** — [Tiago Batista] ()
+* **Gestora de Pessoa e Engajamento** — [Tiago Batista] [https://github.com/tiadeabatista]
 * **Co-facilitadora** — [Emerson Galdino] — [https://github.com/EmersonGald1n0)] 
 
 ## Licença
@@ -55,8 +55,8 @@ Este projeto está sob a licença (Apache License 2.0) — veja o arquivo [LICEN
 
 ## Expressões de gratidão
 
-*agradecemos aos Facilitadores da Resilia Educação (https://www.resilia.com.br/), pelo conhecimento fornecido e pela paciência em ensinar
-*Aos gestores do Projeto Quero-Ser-Dev, por proporcionar uma experiência no qual não temos formas de agradecer está experiencia incrível
-*As monitorias da Karla (Facilitadora), por ajudar diretamente sobre nosso projeto
+Agradecemos aos Facilitadores da Resilia Educação (https://www.resilia.com.br/), pelo conhecimento fornecido e pela paciência em ensinar.
+Aos gestores do Projeto Quero-Ser-Dev, por proporcionar uma experiência no qual não temos formas de agradecer está experiencia incrível
+As monitorias da Karla (Facilitadora), por ajudar diretamente sobre nosso projeto.
 
 ![](https://img.shields.io/badge/Projeto-Conclu%C3%ADdo%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20-green?style=for-the-badge&logo=appveyor) 
