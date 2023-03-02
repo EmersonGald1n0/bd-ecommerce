@@ -53,6 +53,12 @@ Mencione todos os que ajudaram a levantar o projeto desde o seu início.
 
 Este projeto está sob a licença (Apache License 2.0) — veja o arquivo [LICENSE.md](https://github.com/victorfaccioli/PG2-FrontEnders/blob/main/LICENSE) para detalhes.
 
+## Links
+
+[Apresentação - Canva](https://www.canva.com/design/DAFb3QMJjGs/mBHZAJrxhUjIOurMRjSJ-A/view?utm_content=DAFb3QMJjGs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+
+[Trello - Modelo kanban](https://trello.com/b/pWUWOtAP/modulo-3-construindo-um-e-commerce)
+
 ## Expressões de gratidão
 
 Agradecemos aos Facilitadores da Resilia Educação (https://www.resilia.com.br/), pelo conhecimento fornecido e pela paciência em ensinar.
